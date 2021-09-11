@@ -1,0 +1,14 @@
+doctype html
+html 
+    head
+        title Home page
+    body 
+        //- image - header
+        include ./header.pug
+        form(action = "/donateForm", method = "GET")
+            button(type="submit") Donate Blood 
+        form(action="/donaterList", method="get")
+            button(type="submit") Find Donar
+        include ./footer.pug
+
+        //- footer

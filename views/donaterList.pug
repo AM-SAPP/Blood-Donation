@@ -1,0 +1,9 @@
+doctype html
+html 
+    head
+        title Donate List 
+    body 
+        div.container
+            each donar in donars 
+                div#id=#{doner._id}
+                    h1 Blood Group #{donar.bloodGroup}

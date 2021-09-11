@@ -1,0 +1,19 @@
+doctype html
+html 
+    head
+        title Donation Form
+    body 
+        form(action = "/Donate", method = "POST")
+         div
+            label(for = "bloodGroup") bloodGroup:
+            input(name = "bloodGroup" required)
+         br
+         div
+            label(for = "contactNo") contactNo: 
+            input(name = "contactNo" type="number" required)
+         br
+         div
+            label(for = "city") city: 
+            input(name = "city" required)
+         br
+         button(type = "submit") Send Post
