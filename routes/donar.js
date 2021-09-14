@@ -12,6 +12,7 @@ DonarRoute.use(express.urlencoded({extended: true}));
 DonarRoute.route('/')
     .get((req,res,next)=>{
         Donar.find()
+            .populate('userid')
             .then((data)=>{
                 res.statusCode = 200;
                 res.render('donaterList',{donars: data})
@@ -46,7 +47,10 @@ DonarRoute.route('/:postId')
         Donar.findById(req.params.postId)
             .populate('userid')
             .then((data)=>{
-                res.status(200).json(data);
+                res.sendStatus = 200;
+                res.render('post',{
+                    donar: data
+                })
             })
             .catch((err)=>{
                 next(err);
@@ -83,6 +87,9 @@ DonarRoute.route('/:postId')
                     err.status = 401;
                     next(err);
                 }
+            })
+            .catch((err)=>{
+                next(err);
             })
     })
 

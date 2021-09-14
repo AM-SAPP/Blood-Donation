@@ -1,9 +1,20 @@
 doctype html
 html 
     head
-        title Donate List 
-    body 
+        title Donate List
+        link(rel="stylesheet", href="stylesheets/style.css")
+    body
         div.container
-            each donar in donars 
-                div#id=#{doner._id}
-                    h1 Blood Group #{donar.bloodGroup}
+            each donar in donars
+                form(action="/donate/"+donar._id, method="get") 
+                    div(id=donar._id class="donar_card" onclick=`this.parentNode.submit()`)
+                        .name 
+                            h3 Donar : #{donar.userid.name} 
+                        .age 
+                            h3 Age : #{donar.userid.age}
+                        .bloodGroup 
+                            h3 Blood Group : #{donar.bloodGroup}
+                        .contact 
+                            p Contact No : #{donar.contactNo} 
+                        .city 
+                            p Place : #{donar.city} 

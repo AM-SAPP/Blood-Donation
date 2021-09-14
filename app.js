@@ -69,10 +69,6 @@ app.get('/donateForm',(req,res)=>{
   res.render('donateForm');
 })
 
-app.get('/donaterList',(req,res)=>{
-  res.render('donaterList');
-})
-
 app.get('/home',(req,res)=>{
   res.render('home')
 })
