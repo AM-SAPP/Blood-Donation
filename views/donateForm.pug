@@ -4,16 +4,13 @@ html
         title Donation Form
     body 
         form(action = "/Donate", method = "POST")
-         div
             label(for = "bloodGroup") bloodGroup:
             input(name = "bloodGroup" required)
-         br
-         div
+            br
             label(for = "contactNo") contactNo: 
             input(name = "contactNo" type="number" required)
-         br
-         div
+            br
             label(for = "city") city: 
             input(name = "city" required)
-         br
+            br
          button(type = "submit") Send Post

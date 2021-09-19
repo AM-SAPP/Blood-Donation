@@ -15,7 +15,7 @@ DonarRoute.route('/')
             .populate('userid')
             .then((data)=>{
                 res.statusCode = 200;
-                res.render('donaterList',{donars: data})
+                res.render('donaterList',{donarPosts: data})
             })
             .catch(err=>{
                next(err);
@@ -62,7 +62,6 @@ DonarRoute.route('/:postId')
     })
     .put((req,res,next)=>{
         const userid = req.user._id.toString();
-        // console.log(userid);
         Donar.findById(req.params.postId)
             .then((donar)=>{
                 if(donar.userid.toString() === userid){

@@ -4,17 +4,13 @@ html
         title Donate List
         link(rel="stylesheet", href="stylesheets/style.css")
     body
-        div.container
-            each donar in donars
-                form(action="/donate/"+donar._id, method="get") 
-                    div(id=donar._id class="donar_card" onclick=`this.parentNode.submit()`)
-                        .name 
-                            h3 Donar : #{donar.userid.name} 
-                        .age 
-                            h3 Age : #{donar.userid.age}
+        div.donarposts-container
+            each post in donarPosts
+                form(action=`/donate/${post._id}`, method="get") 
+                    div(class="donar_card" onclick=`this.parentNode.submit()`)
                         .bloodGroup 
-                            h3 Blood Group : #{donar.bloodGroup}
+                            h3 Blood Group : #{post.bloodGroup}
                         .contact 
-                            p Contact No : #{donar.contactNo} 
+                            p Contact No : #{post.contactNo} 
                         .city 
-                            p Place : #{donar.city} 
+                            p Place : #{post.city} 

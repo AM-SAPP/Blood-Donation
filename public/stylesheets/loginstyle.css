@@ -1,0 +1,100 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    font-weight: 600;
+  }
+  body{
+    height: 100vh;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #FF476D, #FC766B);
+  }
+  .login{
+    width: 370px;
+    height: 500px;
+    background: rgb(235, 235, 235);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all .4s;
+    border: 5px solid transparent;
+    border-radius: 10px;
+  }
+  form{
+    width: 350px;
+    height: 450px;
+    margin: 40px;
+    padding: 10px;
+  }
+  .one{
+    width: 250px;
+    height: 35px;
+    background: white;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    outline: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 10px;
+  }
+.two{
+      width: 250px;
+      height: 35px;
+      background: white;
+      margin-bottom: 20px;
+      border: 5px solid transparent;
+      outline: none;
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      flex-direction: column;
+      border-radius: 10px;
+      transition: all .4s
+  }
+  
+  .btn{
+    width: 250px;
+    height: 35px;
+    background: #FF476D;
+    outline: none;
+    border: 5px solid transparent;
+    border-radius: 10px;
+    transition: all .4s;
+    cursor: pointer;
+  }
+  h1{
+    display:flex;
+    justify-content: center;
+    margin-top: 5px;
+    color: #FF476D;
+    font-weight: bold;
+  }
+  .sup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+     margin-top: 120px;
+     color: #656565;
+     font-weight: bold;
+  }
+  .sup button{
+    color: #FF467D;
+    color: black;
+    cursor: pointer;
+    }
+
+
+  .one:focus{
+    background: rgb(194, 194, 194);  
+  }
+  .two:focus{
+    background: rgb(194, 194, 194);
+  }
+  .btn:focus{
+    background: #FF7894;
+  }
