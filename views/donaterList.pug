@@ -4,6 +4,7 @@ html
         title Donate List
         link(rel="stylesheet", href="stylesheets/style.css")
     body
+        include ./navbar.pug
         div.donarposts-container
             each post in donarPosts
                 form(action=`/donate/${post._id}`, method="get") 

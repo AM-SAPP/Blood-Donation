@@ -4,8 +4,9 @@ html
         title Signup page
         link(rel="stylesheet", href="stylesheets/signupstyle.css")
     body
+      include ./navbar.pug
       div.signup
-        form(action = "/users/signup", method = "POST")
+        form(action = "/users/signup", method = "POST" class='form-signup')
             label(for = "fullname") Full Name:
                input(name = "fullname" required class="one")
             br

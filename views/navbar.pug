@@ -1,0 +1,17 @@
+block navbar
+    link(rel="stylesheet", href="stylesheets/navbar.css")
+    nav 
+        .navbar 
+            .navitem
+                form(action="/home", method="get" onclick=`this.submit()` class="form-navbar") 
+                    p Home 
+            .navitem
+                form(action="/", method="get" onclick=`this.submit()` class="form-navbar")
+                    p Login 
+            .navitem
+                form(action="/donate", method="get" onclick=`this.submit()` class="form-navbar")
+                    p Donate
+            .navitem.logout
+                form(action="/users/logout", method="get" onclick=`this.submit()` class="form-navbar")
+                    p Logout 
+            

@@ -2,15 +2,19 @@ doctype html
 html 
     head
         title Donation Form
+        link(rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous")
+        link(rel="stylesheet", href="stylesheets/donateform.css")
     body 
-        form(action = "/Donate", method = "POST")
-            label(for = "bloodGroup") bloodGroup:
-            input(name = "bloodGroup" required)
-            br
-            label(for = "contactNo") contactNo: 
-            input(name = "contactNo" type="number" required)
-            br
-            label(for = "city") city: 
-            input(name = "city" required)
-            br
-         button(type = "submit") Send Post
+        include ./navbar.pug
+        div.donate-post
+            form(action = "/donate", method = "POST" class="form-donate")
+                label(for = "bloodGroup") bloodGroup:
+                input(name = "bloodGroup" required class="one")
+                br
+                label(for = "contactNo") contactNo: 
+                input(name = "contactNo" type="number" required class="one")
+                br
+                label(for = "city") city: 
+                input(name = "city" required class="one")
+                br
+                button(type = "submit" class="btn") Send Post

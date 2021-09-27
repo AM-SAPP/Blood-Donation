@@ -27,6 +27,7 @@ mongoose.connect(url)
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'pug');
+app.use(express.static("public"));
 
 
 app.use(logger('dev'));
@@ -69,10 +70,6 @@ app.get('/donateForm',(req,res)=>{
   res.render('donateForm');
 })
 
-app.get('/home',(req,res)=>{
-  res.render('home')
-})
-
 app.get('/success',(req,res)=>{
   res.render('postSuccess');
 })
@@ -96,7 +93,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error'); 
 });
 
 module.exports = app;

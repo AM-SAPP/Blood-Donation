@@ -10,9 +10,9 @@
     font-family: sans-serif;
     background: linear-gradient(to right, #FF476D, #FC766B);
   }
-  .signup{
+  .donate-post{
     width: 370px;
-    height: 500px;
+    height: 400px;
     background: rgb(235, 235, 235);
     position: absolute;
     top: 50%;
@@ -22,9 +22,9 @@
     border: 5px solid transparent;
     border-radius: 10px;
   }
-  .form-signup{
+  .form-donate{
     width: 350px;
-    height: 450px;
+    height: 370px;
     margin: 40px;
     padding: 10px;
   }
@@ -62,7 +62,7 @@
   .sup{
     position: absolute;
     top: 50%;
-    left: 49%;
+    left: 50%;
     transform: translate(-50%, -50%);
      margin-top: 120px;
      color: #656565;
@@ -72,14 +72,12 @@
     color: #FF467D;
     color: black;
     cursor: pointer;
-    margin-top: 40px;
-}
+    }
 
 
   .one:focus{
     background: rgb(194, 194, 194);  
   }
-
   .btn:focus{
     background: #FF7894;
   }

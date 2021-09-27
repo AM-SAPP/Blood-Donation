@@ -3,16 +3,19 @@ html
     head
         title Post 
         link(rel="stylesheet", href="/stylesheets/style.css")
-    body 
-        div.post-container 
-            div.post 
-                .name 
-                    h3 Donar : #{donar.userid.name} 
-                .age 
-                    h3 Age : #{donar.userid.age}
-                .bloodGroup 
-                    h3 Blood Group : #{donar.bloodGroup}
-                .contact 
-                    p Contact No : #{donar.contactNo} 
-                .city 
-                    p Place : #{donar.city}
+        link(rel="stylesheet", href="/stylesheets/navbar.css")
+    body
+        div.main 
+            include ./navbar.pug
+            div.post-container 
+                div.post 
+                    .name 
+                        h3 Donor : #{donar.userid.name} 
+                    .age 
+                        h3 Age : #{donar.userid.age}
+                    .bloodGroup 
+                        h3 Blood Group : #{donar.bloodGroup}
+                    .contact 
+                        p Contact No : #{donar.contactNo} 
+                    .city 
+                        p Place : #{donar.city}

@@ -4,9 +4,10 @@ html
         title Login page
         link(rel="stylesheet", href="stylesheets/loginstyle.css")
     body 
+        include ./navbar.pug
         div.login
             h1 LOGIN
-            form(action = "/users/login", method = "POST")
+            form(action = "/users/login", method = "POST"  class="form-login")
                 label(for = "username") Username:
                 input(name = "username" required class="one")
                 br
@@ -14,6 +15,6 @@ html
                 input(name = "password" type= "password" required class="two")
                 br
                 button(type = "submit" class="btn") Login
-            form(action="/signup", method="get")
+            form(action="/signup", method="get" class="form-login")
                 div.sup Don't have an account
                     button(type="submit" class="btn") Sign Up

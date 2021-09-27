@@ -22,7 +22,7 @@
     border: 5px solid transparent;
     border-radius: 10px;
   }
-  form{
+  .form-login{
     width: 350px;
     height: 450px;
     margin: 40px;

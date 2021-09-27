@@ -1,0 +1,31 @@
+/* navbar styles */
+
+.navbar{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: antiquewhite;
+    border-radius: 20px;
+    margin: 15px;
+}
+
+.navitem{
+    margin: 2px 20px ;
+    cursor: pointer;
+    height: 100%;
+}
+
+.navitem p{
+    font-size: 1.2rem;
+}
+.form-navbar{
+    padding: 15px;
+}
+.navitem:hover{
+    background-color: rgb(253, 222, 169);
+}
+
+.logout{
+    margin-left: auto;
+    margin-right: 40px;
+}

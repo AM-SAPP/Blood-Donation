@@ -13,6 +13,9 @@ router.get('/',function(req, res, next) {
 
 
 router.post('/signup',(req,res,next)=>{
+  if(req.session){
+    res.clearCookie('blood-session');
+  }
   User.register(new User({username: req.body.username}),req.body.password,(err,user)=>{
         if(err){
           res.statusCode = 500;

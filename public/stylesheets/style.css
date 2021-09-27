@@ -1,16 +1,16 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 a {
   color: #00B7FF;
 }
 
-body{
-  margin: 0;
-  padding: 0;
-}
+
+
 
 
 /* DonarPosts styles */
@@ -55,13 +55,17 @@ body{
 
 
 /* Post styles */
+
+.main{
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(to right, rgba(255,0,0,.25), rgba(255,0,0,.6));
+}
 .post-container{
   display: flex;
   justify-content: center;
-  align-items: center;
-  width: 100vw;
-  height: 100vh;
-  background-image: linear-gradient(to right, rgba(255,0,0,.25), rgba(255,0,0,.6)); 
 }
 
 .post{
@@ -70,7 +74,7 @@ body{
   align-items: center;
   font-size: 1.5rem;
   font-weight: 500;
-  width: 50%;
+  width: 80%;
   line-height: .3;
   background-image: linear-gradient(180deg, rgb(217, 241, 248), rgb(142, 217, 241));
   box-shadow: 10px 10px 5px grey;
